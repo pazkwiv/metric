@@ -1,0 +1,77 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://rbrianroser.com/Brian/metricApp.js"></script>
+<script src="http://rbrianroser.com/Brian/metricCtrl.js"></script>
+<script src="http://rbrianroser.com/Brian/metricJqry.js"></script>
+<link href="http://rbrianroser.com/Brian/metric.css" rel="stylesheet" type="text/css" />
+
+<p>Note: there may be some slight descrepancies due to rounding issues.</p>
+
+<p>
+<button id="kspeed">Speed</button>&nbsp;
+<button id="ktemperature">Temperature</button> &nbsp;
+<button id="kdistance">Distance</button> &nbsp;
+<button id="kheight">Height</button> &nbsp;
+<button id="kvolume">Volume</button> &nbsp;
+<button id="karea">Area</button> &nbsp;
+<button id="kweight">Weight</button> &nbsp;
+</p>
+
+<div id="tlrn" ng-app="metricApp" ng-controller="metricCtrl">
+
+<div class="dataArea" id="speed" ng-app="metricApp" ng-controller="metricCtrl">
+<p>mph: <input ng-model="mph" /> km/h: {{mph * 1.61 | number:2}}</p>
+<p>km/h: <input ng-model="kmph" /> mph: {{kmph / 1.61 | number:2}}</p>
+</div>
+
+<div class="dataArea" id="temperature" ng-app="metricApp" ng-controller="metricCtrl">
+<p>Fahrenheit: <input ng-model="far" /> Celsius: {{far * 0.56 - 32 | number:2}} Kelvin: {{far * 0.56 + 241.15 | number:2}}</p>
+<p>Celsius: <input ng-model="cel" /> Fahrenheit: {{cel * 1.8 +32 | number:2}} Kelvin: {{cel + 273.15 | number:2}}</p>
+  </div>
+
+<div class="dataArea" id="distance" ng-app="metricApp" ng-controller="metricCtrl">
+<p>Miles: <input ng-model="mi" /> Kilometer: {{mi * 1.61 | number:2}} <br />
+Yards: <input ng-model="yds" /> Meter: {{yds * 0.92 | number:2}} <br />
+Feet: <input ng-model="ft" /> Centimeters:  {{ft * 30.48 | number:2}} <br />
+Inches: <input ng-model="inch" /> Centimeters:  {{inch * 2.54 | number:2}} 
+</p>
+
+<p>Kilometer:  <input ng-model="km" /> Miles: {{km * 0.62 | number:2}} <br />
+Meter:   <input ng-model="met" /> Yards: {{met * 1.09 | number:2}} Feet: {{met * 3.27 | number:2}} <br />
+Centimeters:   <input ng-model="cm" /> Inches: {{cm * 0.39 | number:2}} 
+</p>
+
+</div>
+
+<div class="dataArea" id="height" ng-app="metricApp" ng-controller="metricCtrl">
+<p>Feet: <input ng-model="hft" /> Inches: <input ng-model="hin" /> Meters: {{hft * 0.3048 + hin * .03 | number:2}}</p>
+<p>Meters <input ng-model="hmet" /> Feet: {{hmet * 39.37 / 12 | limitTo:1}} Inches: {{hmet * 39.37 % 12 | number:0}}</p>
+</div>
+
+<div class="dataArea" id="volume">
+<p>Gallons (liquid): <input ng-model="gal" /> Litres: {{gal * 3.785 | number:2}} <br />
+Quarts: <input ng-model="qt" /> Litres: {{qt * 0.946 | number:2}}<br />
+Pints: <input ng-model="pt" />  Milileters (cc): {{pt * 473 | number:2}}<br />
+Cups: <input ng-model="cup" />  Milileters (cc): {{cup * 236.588 | number:2}}</p>
+ 
+<p>Litres: <input ng-model="lit" /> Gallons: {{lit * 0.264 | number:2}} <br />
+Milileters (cc): <input ng-model="cc" /> Ounces: {{cc * 0.034 | number:2}}
+</p>
+</div>
+
+<div class="dataArea" id="area">
+<p>Square Miles: <input ng-model="sqmi" /> Square Kilometers: {{sqmi * 2.59 | number:2}} <br />
+Acres: <input ng-model="acr" /> Hectares: {{acr * 0.405 | number:2}} 
+</p>
+<p>Square Kilometers: <input ng-model="sqkm" /> Square Miles: {{sqkm * 0.386 | number:2}} <br />
+Hectares: <input ng-model="hctr" /> Acres: {{hctr * 2.47 | number:2}} 
+</p>
+</div>
+
+<div class="dataArea" id="weight"> 
+<p>Pounds: <input ng-model="lbs" /> Ounces: <input ng-model="ozs" /> Kg: {{lbs * 0.45 + ozs * 0.03 | number:2}}</p>
+
+<p>Kg: <input ng-model="kgs" /> Pounds: {{kgs * 2.2}}</p>
+</div>
+
+</div>

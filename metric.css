@@ -1,0 +1,73 @@
+
+
+
+/* visited link */
+
+
+
+span {
+    background-color: lightblue;
+}
+h1.hidden {
+    visibility: hidden;
+}
+
+
+button {
+	background-color: lightblue;
+	border-radius: 25px;
+}
+#tlrn {
+	 position:relative;
+	 height:300px;
+}
+
+#speed {
+	 visibility: visible;
+	 position:absolute;
+     top:0;
+     left:0;
+}
+
+#temperature {
+	 visibility: hidden;
+	 position:absolute;
+     top:0;
+     left:0;
+}
+
+#distance {
+	 visibility: hidden;
+	 position:absolute;
+     top:0;
+     left:0;
+}
+
+#height {
+	 visibility: hidden;
+	 position:absolute;
+     top:0;
+     left:0;
+}
+
+#volume {
+	 visibility: hidden;
+	 position:absolute;
+     top:0;
+     left:0;
+}
+
+#area {
+	 visibility: hidden;
+	 position:absolute;
+     top:0;
+     left:0;
+}
+
+#weight {
+	 visibility: hidden;
+	 position:absolute;
+     top:0;
+     left:0;
+}
+
